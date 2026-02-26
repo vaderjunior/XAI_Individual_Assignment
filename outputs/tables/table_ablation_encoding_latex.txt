@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Ablation study: treating ordinal-like features (sg, al, su) as categorical vs ordinal numeric (5-fold stratified CV on training set; mean $\pm$ std).}
+\label{tab:ablation_encoding}
+\begin{tabular}{llrrrrrr}
+\toprule
+Variant & Model & Acc. & Prec. & Recall & F1 & ROC-AUC & AP \\
+\midrule
+categorical (baseline) & LogReg & 0.99 $\pm$ 0.02 & 0.99 $\pm$ 0.03 & 0.99 $\pm$ 0.01 & 0.99 $\pm$ 0.01 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.00 \\
+categorical (baseline) & RandomForest & 0.99 $\pm$ 0.01 & 0.99 $\pm$ 0.02 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.01 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.00 \\
+ordinal numeric (sg/al/su) & LogReg & 0.99 $\pm$ 0.02 & 0.99 $\pm$ 0.03 & 0.99 $\pm$ 0.01 & 0.99 $\pm$ 0.01 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.00 \\
+ordinal numeric (sg/al/su) & RandomForest & 0.99 $\pm$ 0.01 & 0.99 $\pm$ 0.02 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.01 & 1.00 $\pm$ 0.00 & 1.00 $\pm$ 0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}
